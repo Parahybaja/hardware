@@ -237,6 +237,11 @@
   )
 
 
+  (text "EMERGENCY FUEL SENSOR" (at 55.88 63.5 0)
+    (effects (font (size 1.5 1.5) (color 0 1 255 1)) (justify left bottom))
+    (uuid ca381b32-8e27-4a36-8e1b-4f5c70d66f37)
+  )
+
   (symbol (lib_id "StepDown_LM2596:YAAJ_DCDC_StepDown_LM2596") (at 105.41 100.33 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 06bca042-50ef-4278-b232-9e214cf33038)
