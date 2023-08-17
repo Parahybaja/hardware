@@ -1,7 +1,7 @@
 (sym_lib_table
   (version 7)
-  (lib (name "ESP32-DevKit-v1")(type "KiCad")(uri "C:/Users/Gabriel/Documents/GitHub/PCB/components/symbols/ESP32-DevKit-v1.kicad_sym")(options "")(descr ""))
-  (lib (name "ESP8266")(type "KiCad")(uri "C:/Users/Gabriel/Documents/GitHub/PCB/components/symbols/ESP8266.kicad_sym")(options "")(descr ""))
-  (lib (name "Espressif")(type "KiCad")(uri "C:/Users/Gabriel/Documents/GitHub/PCB/components/symbols/Espressif.kicad_sym")(options "")(descr ""))
-  (lib (name "StepDown_LM2596")(type "KiCad")(uri "C:/Users/Gabriel/Documents/GitHub/PCB/components/symbols/StepDown_LM2596.kicad_sym")(options "")(descr ""))
+  (lib (name "ESP32-DevKit-v1")(type "KiCad")(uri "${KIPRJMOD}/components/symbols/ESP32-DevKit-v1.kicad_sym")(options "")(descr ""))
+  (lib (name "ESP8266")(type "KiCad")(uri "${KIPRJMOD}/components/symbols/ESP8266.kicad_sym")(options "")(descr ""))
+  (lib (name "Espressif")(type "KiCad")(uri "${KIPRJMOD}/components/symbols/Espressif.kicad_sym")(options "")(descr ""))
+  (lib (name "StepDown_LM2596")(type "KiCad")(uri "${KIPRJMOD}/components/symbols/StepDown_LM2596.kicad_sym")(options "")(descr ""))
 )
