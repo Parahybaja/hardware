@@ -1,0 +1,9 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Battery_charger")(type "KiCad")(uri "${KIPRJMOD}/../components/footprints/Battery_charger.pretty")(options "")(descr ""))
+  (lib (name "ESP32-v1")(type "KiCad")(uri "${KIPRJMOD}/../components/footprints/ESP32-v1.pretty")(options "")(descr ""))
+  (lib (name "ESP8266")(type "KiCad")(uri "${KIPRJMOD}/../components/footprints/ESP8266.pretty")(options "")(descr ""))
+  (lib (name "Espressif")(type "KiCad")(uri "${KIPRJMOD}/../components/footprints/Espressif.pretty")(options "")(descr ""))
+  (lib (name "StepDown")(type "KiCad")(uri "${KIPRJMOD}/../components/footprints/StepDown.pretty")(options "")(descr ""))
+  (lib (name "Logos")(type "KiCad")(uri "${KIPRJMOD}/../components/footprints/Logos.pretty")(options "")(descr ""))
+)

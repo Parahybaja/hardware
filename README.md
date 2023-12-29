@@ -1,57 +1,45 @@
-# PCB
+# Hardware v2
 
-## ECU REAR
+<p align="center">
+    <img src="renders/UECU-layout.PNG" alt="UECU layout" height="350">
+    <img src="renders/UECU_3D-1.png" alt="UECU 3D 1" height="350">
+    <img src="renders/UECU_3D-2.png" alt="UECU 3D 2" height="350">
+    <img src="renders/UECU_3D-3.png" alt="UECU 3D 3" height="350">
+</p>
 
-To create the board using KiCad, the first step involved creating a new folder within the GitHub directory named "ECU_Rear."
-Inside this folder, I copied the necessary footprints, 3D models, and symbols. It's important to ensure that everything is written in the standard KiCad format.
+<p align="center">
+    <img src="renders/module-layout.PNG" alt="module layout" height="350">
+    <img src="renders/module_3D-1.png" alt="module 3D 1" height="350">
+    <img src="renders/module_3D-2.png" alt="module 3D 2" height="350">
+    <img src="renders/module_3D-3.png" alt="module 3D 3" height="350">
+</p>
 
-### Board Calculations:
+## UECU
 
-Following that, the necessary calculations were performed to assign values to the components of the circuits.
+Universal Electronics Control Unit
 
-#### Sensor RPM:
+## Module
 
-The first calculation was for the RPM sensor, considering that the motor has a maximum of 4000 RPM. It was necessary to multiply by 2, as we want the theoretical maximum value, and then multiply by 2 again, since the RPM signal has 2 peaks per revolution.
+The Accelaration and Velocity test module
 
-4000RPM * 2 = 8000RPM. 
+### Signal Cleaning
 
-The next step would be to convert RPM to Hertz.
+A signal cleaning stage was employed in the digital inputs of each sensor with the aim of eliminating electromagnetic interference in the data transmission line. For this purpose, a passive low-pass filter with a cutoff frequency of 1GHz was implemented.
 
-F(Hz) = RPM/60.
+To achieve the desired cutoff frequency, based on a resistor of *2.2k* ohms, chosen to maintain the optimal current for the optocoupler's LED, the following calculations were made:
 
-Substituting the values, we arrive at the result of 133.33Hz. However, since the motor has 2 peaks per revolution, it's necessary to multiply this value by 2.
+$$
+F_c = \frac{1}{{2 \pi R C}}
+$$
 
-F(Hz) = 266.66
+$$
+C = \frac{1}{{F_c \cdot 2 \pi R}}
+$$
 
-In order to achieve this frequency, it was necessary to determine the equivalent values of the resistor (R) and capacitor (C) through the low-pass filter. Using the formula:
+$$
+C = \frac{1}{{1 \text{GHz} \cdot 2 \pi \cdot 2.2k}}
+$$
 
-Fc = 1/2πRC
-
-Where Fc is the desired cutoff frequency.
-
-Finding the values for Fc = 266.66Hz, R = 59K, and C = 10nF.
-
-#### Sensor Velocidade:
-
-To convert speed from km/h to Hertz, you need to know the linear speed = 60 km/h, the diameter of the wheel = 400 mm, and the number of pulses per revolution = 3. The formula used is:
-
-Frequency (Hz) = (Linear Speed) / (2 * π * Radius) * (Number of Pulses per Revolution)
- 
-It was necessary to convert 60 km/h to m/s. 
-
-Velocity (m/s) = Velocity (km/h) * (1000 m / 3600 s)
-
-Therefore, the velocity in m/s is: 16.67 m/s.
-
-Afterwards, it was necessary to convert 400mm to meters, resulting in the value of 0.4m. Now that the results are in the correct units of measurement, you just need to substitute them into the frequency formula.
-
-F(Hz) = 79,57Hz.
-
-After using the low-pass filter formula, we found the values of Fc = 79.57Hz, R = 200K, and C = 10nF.
-
-#### Fuel Sensor: 
-
-In the case of the fuel system, the low-pass filter is used to remove electromagnetic interference. We use a default value of 10MHz as the desired cutoff frequency (Fc).
-
-We directly substituted the values into the low-pass filter formula and found the values of Fc = 10kHz, R = 1.5k, and C = 10nF.
-
+$$
+C \approx 72 \text{pF}
+$$
