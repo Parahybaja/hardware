@@ -5,4 +5,5 @@
   (lib (name "ESP8266")(type "KiCad")(uri "${KIPRJMOD}/../components/footprints/ESP8266.pretty")(options "")(descr ""))
   (lib (name "Espressif")(type "KiCad")(uri "${KIPRJMOD}/../components/footprints/Espressif.pretty")(options "")(descr ""))
   (lib (name "LoRa_SX1276")(type "KiCad")(uri "${KIPRJMOD}/../components/footprints/LoRa_SX1276.pretty")(options "")(descr ""))
+  (lib (name "Logos")(type "KiCad")(uri "${KIPRJMOD}/../components/footprints/Logos.pretty")(options "")(descr ""))
 )

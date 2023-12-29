@@ -7,4 +7,5 @@
   (lib (name "TP4056")(type "KiCad")(uri "${KIPRJMOD}/../components/symbols/TP4056.kicad_sym")(options "")(descr ""))
   (lib (name "LoRa-SX1276")(type "KiCad")(uri "${KIPRJMOD}/../components/symbols/LoRa-SX1276.kicad_sym")(options "")(descr ""))
   (lib (name "MPU6050")(type "KiCad")(uri "${KIPRJMOD}/../components/symbols/MPU6050.kicad_sym")(options "")(descr ""))
+  (lib (name "Logos")(type "KiCad")(uri "${KIPRJMOD}/../components/symbols/Logos.kicad_sym")(options "")(descr ""))
 )
